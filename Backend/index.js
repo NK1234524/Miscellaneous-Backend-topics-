@@ -10,6 +10,7 @@ app.get("/register",(req,res)=>{
 });
 
 app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 
 app.post("/register",(req,res)=>{
     let {user,password}=req.body;//body contains all the information about the client has entered
